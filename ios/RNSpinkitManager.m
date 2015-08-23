@@ -13,7 +13,11 @@ RCT_EXPORT_MODULE();
 
 - (UIView *)view
 {
-    return [[RNSpinkit alloc] initWithStyle:RTSpinKitViewStyleWave];
+    return [[RNSpinkit alloc] init];
 }
+
+RCT_EXPORT_VIEW_PROPERTY(type, NSString);
+RCT_EXPORT_VIEW_PROPERTY(size, NSNumber);
+RCT_EXPORT_VIEW_PROPERTY(color, NSString);
 
 @end

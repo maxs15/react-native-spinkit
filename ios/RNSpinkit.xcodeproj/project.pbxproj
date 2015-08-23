@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D42CB35D1B2538DE00FD0AE2 /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D42CB3511B2538DE00FD0AE2 /* libRNSpinkit.a */; };
 		D42CB36D1B25394600FD0AE2 /* RNSpinkitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D42CB36C1B25394600FD0AE2 /* RNSpinkitManager.m */; };
 		D42CB3701B253C0B00FD0AE2 /* RNSpinkit.m in Sources */ = {isa = PBXBuildFile; fileRef = D42CB36F1B253C0B00FD0AE2 /* RNSpinkit.m */; };
 		D4640D801B879C8500F8D7CB /* RTSpinKit9CubeGridAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D5E1B879C8500F8D7CB /* RTSpinKit9CubeGridAnimation.m */; };
@@ -29,16 +28,6 @@
 		D4640D901B879C8500F8D7CB /* RTSpinKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D7F1B879C8500F8D7CB /* RTSpinKitView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D42CB35E1B2538DE00FD0AE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D42CB3491B2538DE00FD0AE2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D42CB3501B2538DE00FD0AE2;
-			remoteInfo = "react-native-recorder";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		D42CB34F1B2538DE00FD0AE2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -53,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		D42CB3511B2538DE00FD0AE2 /* libRNSpinkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSpinkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D42CB35C1B2538DE00FD0AE2 /* RNSpinkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNSpinkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42CB36B1B25392F00FD0AE2 /* RNSpinkitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSpinkitManager.h; sourceTree = "<group>"; };
 		D42CB36C1B25394600FD0AE2 /* RNSpinkitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSpinkitManager.m; sourceTree = "<group>"; };
 		D42CB36E1B253BBD00FD0AE2 /* RNSpinkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSpinkit.h; sourceTree = "<group>"; };
@@ -103,14 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D42CB3591B2538DE00FD0AE2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D42CB35D1B2538DE00FD0AE2 /* libRNSpinkit.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				D42CB3511B2538DE00FD0AE2 /* libRNSpinkit.a */,
-				D42CB35C1B2538DE00FD0AE2 /* RNSpinkitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,24 +185,6 @@
 			productReference = D42CB3511B2538DE00FD0AE2 /* libRNSpinkit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D42CB35B1B2538DE00FD0AE2 /* RNSpinkitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D42CB3681B2538DE00FD0AE2 /* Build configuration list for PBXNativeTarget "RNSpinkitTests" */;
-			buildPhases = (
-				D42CB3581B2538DE00FD0AE2 /* Sources */,
-				D42CB3591B2538DE00FD0AE2 /* Frameworks */,
-				D42CB35A1B2538DE00FD0AE2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D42CB35F1B2538DE00FD0AE2 /* PBXTargetDependency */,
-			);
-			name = RNSpinkitTests;
-			productName = "react-native-recorderTests";
-			productReference = D42CB35C1B2538DE00FD0AE2 /* RNSpinkitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,9 +194,6 @@
 				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					D42CB3501B2538DE00FD0AE2 = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
-					D42CB35B1B2538DE00FD0AE2 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -253,20 +211,9 @@
 			projectRoot = "";
 			targets = (
 				D42CB3501B2538DE00FD0AE2 /* RNSpinkit */,
-				D42CB35B1B2538DE00FD0AE2 /* RNSpinkitTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D42CB35A1B2538DE00FD0AE2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D42CB34D1B2538DE00FD0AE2 /* Sources */ = {
@@ -295,22 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D42CB3581B2538DE00FD0AE2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D42CB35F1B2538DE00FD0AE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D42CB3501B2538DE00FD0AE2 /* RNSpinkit */;
-			targetProxy = D42CB35E1B2538DE00FD0AE2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D42CB3631B2538DE00FD0AE2 /* Debug */ = {
@@ -421,36 +353,6 @@
 			};
 			name = Release;
 		};
-		D42CB3691B2538DE00FD0AE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "react-native-recorderTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RNSpinkitTests;
-			};
-			name = Debug;
-		};
-		D42CB36A1B2538DE00FD0AE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "react-native-recorderTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RNSpinkitTests;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -468,15 +370,6 @@
 			buildConfigurations = (
 				D42CB3661B2538DE00FD0AE2 /* Debug */,
 				D42CB3671B2538DE00FD0AE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D42CB3681B2538DE00FD0AE2 /* Build configuration list for PBXNativeTarget "RNSpinkitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D42CB3691B2538DE00FD0AE2 /* Debug */,
-				D42CB36A1B2538DE00FD0AE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
