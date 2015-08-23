@@ -16,7 +16,8 @@ var Example = React.createClass({
       index: 0,
       types: ['CircleFlip', 'Bounce', 'Wave', 'WanderingCubes', 'Pulse', 'ChasingDots', 'ThreeBounce', 'Circle', '9CubeGrid', 'WordPress', 'FadingCircle', 'FadingCircleAlt', 'Arc', 'ArcAlt'],
       size: 100,
-      color: "#FFFFFF"
+      color: "#FFFFFF",
+      isVisible: true
     }
   },
 
@@ -35,12 +36,16 @@ var Example = React.createClass({
     this.setState({color: '#'+Math.floor(Math.random()*16777215).toString(16)});
   },
 
+  changeVisibility() {
+    this.setState({isVisible: !this.state.isVisible});
+  },
+
   render() {
     var type = this.state.types[this.state.index];
 
     return (
       <View style={styles.container}>
-        <Spinner style={styles.spinner} size={this.state.size} type={type} color={this.state.color}/>
+        <Spinner style={styles.spinner} isVisible={this.state.isVisible} size={this.state.size} type={type} color={this.state.color}/>
 
         <Text style={styles.text}>Type: {type}</Text>
 
@@ -54,6 +59,10 @@ var Example = React.createClass({
 
         <TouchableOpacity style={styles.btn} onPress={this.changeColor}>
           <Text style={styles.text}>Change color</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.btn} onPress={this.changeVisibility}>
+          <Text style={styles.text}>Change visibility</Text>
         </TouchableOpacity>
       </View>
     );
