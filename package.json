@@ -1,0 +1,26 @@
+{
+  "name": "react-native-spinkit",
+  "version": "0.0.1",
+  "description": "A collection of animated loading indicators for React Native",
+  "main": "index.ios.js",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "spinkit",
+    "spinner",
+    "loader",
+    "indicator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxs15/react-native-spinkit.git"
+  },
+  "author": {
+    "name": "Maxime Mezrahi",
+    "email": "maxime.mezrahi@gmail.com",
+    "url": "https://github.com/maxs15"
+  },
+  "dependencies": {
+  }
+}
