@@ -1,5 +1,5 @@
 #import "RTSpinKitView.h"
 
-@interface RNSpinkit : RTSpinKitView
+@interface RNSpinkit : UIView
 
 @end
