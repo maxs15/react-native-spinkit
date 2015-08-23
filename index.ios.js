@@ -2,24 +2,29 @@ var React = require('React');
 var {PropTypes} = React;
 
 var requireNativeComponent = require('requireNativeComponent');
+var View = require('View');
+
 
 var Spinkit = React.createClass({
 	propTypes: {
 		type: PropTypes.string,
 		color: PropTypes.string,
-		size: PropTypes.number
+		size: PropTypes.number,
+		isVisible: PropTypes.bool
 	},
 
 	getDefaultProps() {
 		return {
 			size: 37,
-			color: "#000000"
+			color: "#000000",
+			isVisible: true
 		};
 	},
 
 	render() {
 		var size = {height: this.props.size, width: this.props.size};
 
+		if (!this.props.isVisible) return <View/>;
 		return (
 			<RNSpinkit
 				type={this.props.type}

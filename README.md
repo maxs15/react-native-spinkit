@@ -22,6 +22,7 @@ Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/
 
 | Prop  | Default  | Type | Description |
 | :------------ |:---------------:| :---------------:| :-----|
+| isVisible | `true` | `boolean` | Visibility of the spinner |
 | color | #000000 | `string` | Color of the spinner  |
 | size | 37 | `number` | Size of the spinner |
 | type | Plane | `string` | Style type of the spinner |
