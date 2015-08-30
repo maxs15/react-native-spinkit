@@ -1,9 +1,8 @@
-var React = require('React');
-var {PropTypes} = React;
-
-var requireNativeComponent = require('requireNativeComponent');
-var View = require('View');
-
+var React = require('react-native');
+var {
+	PropTypes,
+	requireNativeComponent
+} = React;
 
 var Spinkit = React.createClass({
 	propTypes: {
