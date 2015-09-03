@@ -1,7 +1,8 @@
 var React = require('react-native');
 var {
 	PropTypes,
-	requireNativeComponent
+	requireNativeComponent,
+	View
 } = React;
 
 var Spinkit = React.createClass({
