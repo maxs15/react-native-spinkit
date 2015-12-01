@@ -31,7 +31,9 @@ var Spinkit = React.createClass({
 				size={this.props.size}
 				color={this.props.color}
 				style={[size, this.props.style]}
-				/>
+			>
+				{this.props.children}
+			/RNSpinkit>
 			);
 	}
 
