@@ -48,9 +48,10 @@ Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/
 - FadingCircleAlt
 - Arc
 - ArcAlt
+
 ##### Android
 - ThreeBounce
-- More to come...
+- More to come...   
 Contributors welcomed, submit a PR to add a missing spinner  :)
 
 ## Acknowledgements
