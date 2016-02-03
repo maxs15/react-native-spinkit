@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "react-native": "^0.18.1",
-    "react-native-spinkit": "0.0.5"
+    "react-native-spinkit": "0.0.6"
   }
 }
