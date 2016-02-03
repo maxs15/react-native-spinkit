@@ -52,7 +52,7 @@ Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/
 ##### Android
 - ThreeBounce
 - More to come...   
-Contributors welcomed, submit a PR to add a missing spinner  :)
+Contributors welcomed, submit a PR to [add a missing type](https://github.com/maxs15/react-native-spinkit/issues/4)  :)
 
 ## Acknowledgements
 
