@@ -6,7 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "react-native": "^0.18.1",
+    "react": "^0.14.8",
+    "react-native": "^0.22.2",
     "react-native-spinkit": "0.0.7"
   }
 }
