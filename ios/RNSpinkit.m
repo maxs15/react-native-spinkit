@@ -20,6 +20,10 @@
    }
 }
 
+- (NSNumber*)size {
+   return _size;
+}
+
 - (void)setType:(NSString*)type
 {
    _type = type;
@@ -27,6 +31,10 @@
       RTSpinKitViewStyle style = [self getStyleFromString:_type];
       [_spinner setStyle:style];
    }
+}
+
+- (NSString*)type {
+   return _type;
 }
 
 - (void)setColor:(NSString*)color
@@ -38,12 +46,16 @@
    }
 }
 
+- (NSString*)color {
+   return _color;
+}
+
 #pragma mark - Utility
 
 - (RTSpinKitViewStyle)getStyleFromString:(NSString*)type
 {
    RTSpinKitViewStyle style = RTSpinKitViewStylePlane;
-   
+
    if ([type isEqual:@"CircleFlip"])
       style = RTSpinKitViewStyleCircleFlip;
    else if ([type isEqual:@"Bounce"])
@@ -81,11 +93,11 @@
    NSScanner *scanner = [NSScanner scannerWithString:color];
    [scanner setScanLocation:1]; // bypass '#' character
    [scanner scanHexInt:&rgbValue];
-    
+
    if (color.length == @"#00000000".length) {
       return [UIColor colorWithRed:((rgbValue & 0xFF000000) >> 24)/255.0 green:((rgbValue & 0xFF0000) >> 16)/255.0 blue:((rgbValue & 0xFF00) >> 8)/255.0 alpha:(rgbValue & 0xFF)/255.0];
    }
-   
+
    return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
 }
 
