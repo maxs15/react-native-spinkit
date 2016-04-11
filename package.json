@@ -2,7 +2,7 @@
   "name": "react-native-spinkit",
   "version": "0.0.8",
   "description": "A collection of animated loading indicators for React Native",
-  "main": "index.ios.js",
+  "main": "index.js",
   "keywords": [
     "react-component",
     "react-native",
