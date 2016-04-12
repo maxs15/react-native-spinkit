@@ -12,7 +12,7 @@ class Wave extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			bounces: [
+			bars: [
 				new Animated.Value(0.4),
 				new Animated.Value(0.4),
 				new Animated.Value(0.4),
@@ -32,7 +32,7 @@ class Wave extends React.Component {
 
   getAllAnimations(){
     this.animations = []
-    this.state.bounces.forEach((val, index) => {
+    this.state.bars.forEach((val, index) => {
       var animation = this.animate(index)
       this.animations.push(animation);
     });
@@ -52,9 +52,9 @@ class Wave extends React.Component {
 
 	animate(index) {
 		return Animated.sequence([
-      Animated.timing(this.state.bounces[index], {toValue: 0.4, duration: 300,easing:Easing.inOut(Easing.ease)}),
-			Animated.timing(this.state.bounces[index], {toValue: 1, duration: 200,easing:Easing.inOut(Easing.ease)}),
-      Animated.timing(this.state.bounces[index], {toValue: 0.4, duration: 300,easing:Easing.inOut(Easing.ease)})
+      Animated.timing(this.state.bars[index], {toValue: 0.4, duration: 300,easing:Easing.inOut(Easing.ease)}),
+			Animated.timing(this.state.bars[index], {toValue: 1, duration: 200,easing:Easing.inOut(Easing.ease)}),
+      Animated.timing(this.state.bars[index], {toValue: 0.4, duration: 300,easing:Easing.inOut(Easing.ease)})
 		]);
 	}
 
@@ -66,18 +66,18 @@ class Wave extends React.Component {
 			backgroundColor: this.props.color,
 			marginLeft: 1,
 			marginRight: 1,
-			transform: [{scaleY: this.state.bounces[index]}]
+			transform: [{scaleY: this.state.bars[index]}]
 		};
 
 		return <Animated.View style={bounce} key={index}/>;
 	}
 
 	render() {
-		var bounces = this.state.bounces.map((val, index) => this.renderBounce(index));
+		var bars = this.state.bars.map((val, index) => this.renderBounce(index));
 
 		return (
 			<View style={[styles.wrapper, {height: this.props.size}]}>
-				{bounces}
+				{bars}
 			</View>
 		);
 	}
