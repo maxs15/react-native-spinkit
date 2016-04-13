@@ -1,7 +1,8 @@
 var React = require('react-native');
 
 var types = {
-	'ThreeBounce': require('./three-bounce')
+	'ThreeBounce': require('./three-bounce'),
+	'9CubeGrid':require('./nine-cube-grid')
 };
 
 class Spinner extends React.Component {
