@@ -1,10 +1,11 @@
-var React = require('react-native');
+import React from 'react'
+import ReactNative from 'react-native'
 
 var {
 	View,
 	StyleSheet,
 	Animated
-} = React;
+} = ReactNative;
 
 class ThreeBounce extends React.Component {
 

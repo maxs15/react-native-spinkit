@@ -1,11 +1,12 @@
-var React = require('react-native');
+import React from 'react'
+import ReactNative from 'react-native'
 
 var {
 	PropTypes,
 	requireNativeComponent,
 	View,
 	Platform
-} = React;
+} = ReactNative;
 
 var Spinner = require('./spinner');
 var RNSpinkit = null;
