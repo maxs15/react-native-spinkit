@@ -2,7 +2,6 @@ import React from 'react'
 import ReactNative from 'react-native'
 
 var {
-	PropTypes,
 	requireNativeComponent,
 	View,
 	Platform
@@ -14,10 +13,10 @@ var RNSpinkit = null;
 class Spinkit extends React.Component {
 
 	static propTypes = {
-		type: PropTypes.string,
-		color: PropTypes.string,
-		size: PropTypes.number,
-		isVisible: PropTypes.bool
+		type: React.PropTypes.string,
+		color: React.PropTypes.string,
+		size: React.PropTypes.number,
+		isVisible: React.PropTypes.bool
 	};
 
 	static defaultProps = {
