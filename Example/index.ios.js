@@ -1,11 +1,14 @@
-var React = require('react-native');
+var React = require('react');
+var ReactNative = require('react-native');
+
+
 var {
   AppRegistry,
   StyleSheet,
   View,
   TouchableOpacity,
   Text
-} = React;
+} = ReactNative;
 
 var Spinner = require('react-native-spinkit');
 
