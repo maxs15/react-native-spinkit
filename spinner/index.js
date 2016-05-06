@@ -1,4 +1,4 @@
-var React = require('react-native');
+import React from 'react'
 
 var types = {
 	'ThreeBounce': require('./three-bounce'),
