@@ -1,11 +1,12 @@
-var React = require('react-native');
+import React from 'react'
+import ReactNative from 'react-native'
 
 var {
 	View,
 	StyleSheet,
 	Animated,
-  Easing
-} = React;
+	Easing
+} = ReactNative;
 
 class Wave extends React.Component {
 
