@@ -2,7 +2,7 @@
  * react-native-spinkit android sample app
  */
 
-import React, {PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -14,7 +14,7 @@ import {
 
 import Spinner from 'react-native-spinkit';
 
-class Example extends Component {
+class rn_spinkit_dev extends Component {
 
   constructor(props) {
     super(props)
@@ -123,7 +123,6 @@ const styles = StyleSheet.create({
   },
   slider : {
     width : 200,
-    // color : 'white'
   },
   label: {
     textAlign: 'left',
@@ -132,4 +131,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Example', () => Example);
+AppRegistry.registerComponent('rn_spinkit_dev', () => rn_spinkit_dev);
