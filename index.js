@@ -51,7 +51,7 @@ class Spinkit extends React.Component {
 NativeModules.RNSpinkit;
 
 // Native component
-RNSpinkit = requireNativeComponent('RNSpinkit', Spinkit.propTypes);
+RNSpinkit = requireNativeComponent('RNSpinkit', Spinkit);
 
 
 module.exports = Spinkit;
