@@ -3,6 +3,7 @@ import ReactNative from 'react-native'
 
 var {
 	requireNativeComponent,
+	NativeModules,
 	View
 } = ReactNative;
 
@@ -45,7 +46,10 @@ class Spinkit extends React.Component {
 
 }
 
+NativeModules.RNSpinkit;
+
 // Native component
-RNSpinkit = requireNativeComponent('RNSpinkit', Spinkit);
+RNSpinkit = requireNativeComponent('RNSpinkit', Spinkit.propTypes);
+
 
 module.exports = Spinkit;
