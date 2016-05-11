@@ -46,6 +46,8 @@ class Spinkit extends React.Component {
 
 }
 
+// Since RNPM does not recognize `requireNativeComponent`, so we have to
+// add this line, and RNPM will link native modules automatically
 NativeModules.RNSpinkit;
 
 // Native component
