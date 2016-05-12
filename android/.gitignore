@@ -37,3 +37,19 @@ captures/
 
 # Keystore files
 *.jks
+
+# Eclipse Metadata
+.metadata/
+#
+# Mac OS X clutter
+*.DS_Store
+#
+# Windows clutter
+Thumbs.db
+#
+# # Intellij IDEA (see https://intellij-support.jetbrains.com/entries/23393067)
+*.iws
+.idea/libraries
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/workspace.xml
