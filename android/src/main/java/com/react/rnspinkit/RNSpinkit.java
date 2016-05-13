@@ -7,6 +7,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RotateDrawable;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
@@ -72,8 +73,12 @@ public class RNSpinkit extends SimpleViewManager<SpinKitView> {
 
     @ReactProp(name = "color")
     public void setColor(SpinKitView view, @Nullable String color) {
-        mSprite.setColor(Color.parseColor(color));
+        try {
+            mSprite.setColor(Color.parseColor(color));
         view.setIndeterminateDrawable(mSprite);
+        } catch(Exception err) {
+            Log.e("RNSpinkit-Err", err.toString() + "when set prop color to " + color);
+        }
     }
 
     @ReactProp(name = "size")
