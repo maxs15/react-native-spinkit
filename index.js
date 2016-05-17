@@ -1,13 +1,12 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import ReactNative from 'react-native'
 
 var {
 	requireNativeComponent,
-	View,
-	Platform
+	NativeModules,
+	View
 } = ReactNative;
 
-var Spinner = require('./spinner');
 var RNSpinkit = null;
 
 class Spinkit extends React.Component {
@@ -16,7 +15,14 @@ class Spinkit extends React.Component {
 		type: React.PropTypes.string,
 		color: React.PropTypes.string,
 		size: React.PropTypes.number,
-		isVisible: React.PropTypes.bool
+		isVisible: React.PropTypes.bool,
+		testID:React.PropTypes.string,
+		accessibilityComponentType:PropTypes.string,
+		accessibilityLabel:PropTypes.string,
+		accessibilityLiveRegion:PropTypes.string,
+		renderToHardwareTextureAndroid:PropTypes.bool,
+		importantForAccessibility:PropTypes.string,
+		onLayout:PropTypes.bool,
 	};
 
 	static defaultProps = {
@@ -27,11 +33,10 @@ class Spinkit extends React.Component {
 
 	render() {
 		var size = {height: this.props.size, width: this.props.size};
-		var Spin = (Platform.OS == "ios") ? RNSpinkit : Spinner;
 
 		if (!this.props.isVisible) return <View/>;
 		return (
-			<Spin
+			<RNSpinkit
 				type={this.props.type}
 				size={this.props.size}
 				color={this.props.color}
@@ -41,9 +46,12 @@ class Spinkit extends React.Component {
 
 }
 
-// Native component - Only for IOS
-if (Platform.OS == "ios") {
-	RNSpinkit = requireNativeComponent('RNSpinkit', Spinkit);
-}
+// Since RNPM does not recognize `requireNativeComponent`, so we have to
+// add this line, and RNPM will link native modules automatically
+NativeModules.RNSpinkit;
+
+// Native component
+RNSpinkit = requireNativeComponent('RNSpinkit', Spinkit);
+
 
 module.exports = Spinkit;
