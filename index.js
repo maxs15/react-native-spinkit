@@ -22,7 +22,7 @@ class Spinkit extends React.Component {
 		accessibilityLiveRegion:PropTypes.string,
 		renderToHardwareTextureAndroid:PropTypes.bool,
 		importantForAccessibility:PropTypes.string,
-		onLayout:PropTypes.bool,
+		onLayout:PropTypes.func,
 	};
 
 	static defaultProps = {
