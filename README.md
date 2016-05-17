@@ -1,5 +1,8 @@
 # react-native-spinkit
 
+[![npm](https://img.shields.io/npm/dm/react-native-spinkit.svg?maxAge=2592000)]()
+[![npm](https://img.shields.io/npm/dt/react-native-spinkit.svg?maxAge=2592000)]()   
+
 A collection of animated loading indicators   
 React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 
