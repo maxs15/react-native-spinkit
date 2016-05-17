@@ -39,8 +39,6 @@ android {
 
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.facebook.react:react-native:+'
     compile 'com.github.ybq:Android-SpinKit:1.0.4'
 }
