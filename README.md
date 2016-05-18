@@ -50,13 +50,13 @@ Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/
 - ThreeBounce
 - Circle
 - 9CubeGrid
-- WordPress
+- WordPress (IOS only)
 - FadingCircle
 - FadingCircleAlt
-- Arc
-- ArcAlt
+- Arc (IOS only)
+- ArcAlt (IOS only)
 
 ## Acknowledgements
 
-Android library: [SpinKit-ObjC](https://github.com/raymondjavaxx/SpinKit-ObjC)   
-IOS library: [Android-SpinKit](https://github.com/ybq/Android-SpinKit)
+IOS library: [SpinKit-ObjC](https://github.com/raymondjavaxx/SpinKit-ObjC)   
+Android  library: [Android-SpinKit](https://github.com/ybq/Android-SpinKit)
