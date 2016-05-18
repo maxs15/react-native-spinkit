@@ -17,15 +17,10 @@ React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 `rnpm link react-native-spinkit`
 
 ##### Manual linking - IOS
-On IOS the spinners have been developped in Objective-C, therefore you have to include the Library:
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-spinkit` and add `RNSpinkit.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNSpinkit.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Click `RNSpinkit.xcodeproj` in the project navigator and go the `Build Settings` tab. Make sure 'All' is toggled on (instead of 'Basic'). Look for `Header Search Paths` and make sure it contains both `$(SRCROOT)/../react-native/React` and `$(SRCROOT)/../../React` - mark both as `recursive`.
+Follow the wiki available [here](https://github.com/maxs15/react-native-spinkit/wiki/Manual-linking---IOS)
 
 ##### Manual linking - Android
-Check the modifications we did on the example project [here](https://github.com/maxs15/react-native-spinkit/commit/85ceaf9be3b719bfe86704bc1468acaaa6736c51)
+Follow the wiki available [here](https://github.com/maxs15/react-native-spinkit/wiki/Manual-linking---Android)
 
 ## Example
 Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/Example/index.ios.js) in the Example folder.
