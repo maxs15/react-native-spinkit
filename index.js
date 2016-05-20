@@ -37,8 +37,8 @@ class Spinkit extends React.Component {
 		if (!this.props.isVisible) return <View/>;
 		return (
 			<RNSpinkit
-				type={this.props.type}
-				size={this.props.size}
+				type={String(this.props.type)}
+				size={parseInt(this.props.size)}
 				color={this.props.color}
 				style={[size, this.props.style]}/>
 		);
