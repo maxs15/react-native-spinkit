@@ -47,7 +47,7 @@ public class RNSpinkit extends SimpleViewManager<SpinKitView> {
 
     ReactApplicationContext mContext;
     Sprite mSprite = getSprite("");
-    int mSize = 48;
+    double mSize = 48;
 
     public RNSpinkit(ReactApplicationContext reactContext) {
         mContext = reactContext;
@@ -82,7 +82,7 @@ public class RNSpinkit extends SimpleViewManager<SpinKitView> {
     }
 
     @ReactProp(name = "size")
-    public void setSize(SpinKitView view, @Nullable Integer size) {
+    public void setSize(SpinKitView view, @Nullable double size) {
         mSize = size;
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(params);
