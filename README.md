@@ -55,3 +55,7 @@ Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/
 
 IOS library: [SpinKit-ObjC](https://github.com/raymondjavaxx/SpinKit-ObjC)   
 Android  library: [Android-SpinKit](https://github.com/ybq/Android-SpinKit)
+
+## License
+
+(c) 2016 Maxime Mezrahi, [MIT license](/blob/master/LICENSE).
