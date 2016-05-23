@@ -58,4 +58,4 @@ Android  library: [Android-SpinKit](https://github.com/ybq/Android-SpinKit)
 
 ## License
 
-(c) 2016 Maxime Mezrahi, [MIT license](/blob/master/LICENSE).
+(c) 2016 Maxime Mezrahi, [MIT license](/LICENSE).
