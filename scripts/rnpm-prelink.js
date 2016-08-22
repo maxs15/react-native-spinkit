@@ -47,3 +47,38 @@ if (String(dep).match(/url[^h]*https\:\/\/jitpack\.io/) === null) {
   depStr = String(cfg).replace(/allprojects(.|[\r\n])+/, str);
   fs.writeFileSync(GRADLE_SCRIPT_PATH, depStr);
 }
+
+// check if RN version >= 0.29 and add project dependency to MainApplication.java
+
+var PACKAGE_JSON = process.cwd() + '/package.json';
+var hasNecessaryFile = fs.existsSync(PACKAGE_JSON);
+
+if (!hasNecessaryFile) {
+  throw 'RNSpinkit could not link Android automatically, some files could not be found.'
+}
+
+var package = JSON.parse(fs.readFileSync(PACKAGE_JSON));
+var APP_NAME = package.name;
+var APPLICATION_MAIN = process.cwd() + '/android/app/src/main/java/com/' + APP_NAME.toLocaleLowerCase() + '/MainApplication.java';
+
+console.log('RNSpinkit checking app version ..');
+
+var APP_VERSION = parseFloat(/\d\.\d+(?=\.)/.exec(package.dependencies['react-native']));
+
+if(APP_VERSION >= 0.29) {
+  console.log('RNSpinkit patching MainApplication.java .. ');
+  if(!fs.existsSync(APPLICATION_MAIN)) {
+    throw 'RNSpinkit could not link Android automatically, MainApplication.java not found in path : ' + APPLICATION_MAIN
+  }
+  var main = fs.readFileSync(APPLICATION_MAIN);
+  if(String(main).match('new RNSpinkitPackage()') !== null) {
+    console.log('skipped');
+    return
+  }
+  main = String(main).replace('new MainReactPackage()', 'new RNSpinkitPackage(),\n           new MainReactPackage()');
+  main = String(main).replace('import com.facebook.react.ReactApplication;', 'import com.facebook.react.ReactApplication;\nimport com.react.rnspinkit.RNSpinkitPackage;')
+
+  fs.writeFileSync(APPLICATION_MAIN, main);
+  console.log('RNSpinkit patching MainApplication.java .. ok')
+
+}
