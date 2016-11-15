@@ -13,7 +13,10 @@ React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 
 `npm install react-native-spinkit@latest --save`
 
-##### Link the library automatically using [RNPM](https://github.com/rnpm/rnpm)
+##### Automatically link the library
+`react-native link`
+
+> For RN projects < 0.29 link the library automatically using [RNPM](https://github.com/rnpm/rnpm)
 `rnpm link react-native-spinkit`
 
 ##### Manual linking - IOS
