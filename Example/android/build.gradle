@@ -14,14 +14,13 @@ buildscript {
 
 allprojects {
     repositories {
+				// Add jitpack repository (added by react-native-spinkit)
+				maven { url "https://jitpack.io" }
         mavenLocal()
         jcenter()
         maven {
-						url "https://jitpack.io"
-				}
-        maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url "$projectDir/../../node_modules/react-native/android"
+            url "$rootDir/../node_modules/react-native/android"
         }
     }
 }
