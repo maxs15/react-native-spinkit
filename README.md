@@ -12,6 +12,7 @@ React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 ## Getting started
 
 `npm install react-native-spinkit@latest --save`
+For RN < 0.40 support, use react-native-spinkit@0.1.5
 
 ##### Automatically link the library
 `react-native link`
