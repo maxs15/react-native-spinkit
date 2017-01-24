@@ -1,7 +1,7 @@
 #ifndef RNSpinkit_RCTViewManager_h
 #define RNSpinkit_RCTViewManager_h
 
-#import "RCTViewManager.h"
+#import <React/RCTViewManager.h>
 
 @interface RNSpinkitManager : RCTViewManager
 
