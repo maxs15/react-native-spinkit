@@ -62,7 +62,7 @@ public class RNSpinkit extends SimpleViewManager<RNSpinkitView> {
     }
 
     @ReactProp(name = "color")
-    public void setColor(RNSpinkitView view, @Nullable String color) {
+    public void setColor(RNSpinkitView view, @Nullable int color) {
         view.setSpriteColor(color);
     }
 
