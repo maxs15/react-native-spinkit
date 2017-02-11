@@ -7,7 +7,7 @@ try {
   var cfg = fs.readFileSync(GRADLE_SCRIPT_PATH);
 } catch(err) {
   console.log(err.stack);
-  console.log('Failed to load `android/build.gralde` when linking react-native-spinkit');
+  console.log('Failed to load `android/build.gradle` when linking react-native-spinkit');
 }
 
 var depStr = String(cfg).match(/allprojects(.|[\r\n])+/);
