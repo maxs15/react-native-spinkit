@@ -28,6 +28,7 @@
 #include <tgmath.h>
 
 static const CGFloat kRTSpinKitViewDefaultSpinnerSize = 37.0;
+static const CGFloat kRTSpinKitViewDefaultDuration = 0.25;
 
 @interface RTSpinKitView ()
 @end
@@ -56,15 +57,18 @@ static const CGFloat kRTSpinKitViewDefaultSpinnerSize = 37.0;
 }
 
 -(instancetype)initWithStyle:(RTSpinKitViewStyle)style color:(UIColor *)color {
-    return [self initWithStyle:style color:color spinnerSize:kRTSpinKitViewDefaultSpinnerSize];
+    return [self initWithStyle:style color:color
+                   spinnerSize:kRTSpinKitViewDefaultSpinnerSize
+                      duration:kRTSpinKitViewDefaultDuration];
 }
 
--(instancetype)initWithStyle:(RTSpinKitViewStyle)style color:(UIColor*)color spinnerSize:(CGFloat)spinnerSize {
+-(instancetype)initWithStyle:(RTSpinKitViewStyle)style color:(UIColor*)color spinnerSize:(CGFloat)spinnerSize duration:(CGFloat)duration {
     self = [super initWithFrame:CGRectMake(0.0, 0.0, spinnerSize, spinnerSize)];
     if (self) {
         _style = style;
         _color = color;
         _spinnerSize = spinnerSize;
+        _duration = duration;
         _hidesWhenStopped = YES;
         [self applyAnimation];
         [self sizeToFit];
@@ -91,7 +95,7 @@ static const CGFloat kRTSpinKitViewDefaultSpinnerSize = 37.0;
 
     CGSize size = CGSizeMake(self.spinnerSize, self.spinnerSize);
     NSObject<RTSpinKitAnimating> *animation = RTSpinKitAnimationFromStyle(self.style);
-    [animation setupSpinKitAnimationInLayer:self.layer withSize:size color:self.color];
+    [animation setupSpinKitAnimationInLayer:self.layer withSize:size color:self.color duration:self.duration];
 }
 
 #pragma mark - Hooks
@@ -125,7 +129,7 @@ static const CGFloat kRTSpinKitViewDefaultSpinnerSize = 37.0;
         if (self.hidesWhenStopped) {
             self.hidden = YES;
         }
-        
+
         self.stopped = YES;
         [self pauseLayers];
     }
@@ -160,7 +164,7 @@ static const CGFloat kRTSpinKitViewDefaultSpinnerSize = 37.0;
 
 -(void)setColor:(UIColor *)color animated:(BOOL)animated {
     UIColor *previousColor = _color;
-    
+
     _color = color;
 
     if (animated) {

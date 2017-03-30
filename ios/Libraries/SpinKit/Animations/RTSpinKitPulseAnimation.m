@@ -26,10 +26,10 @@
 
 @implementation RTSpinKitPulseAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
-    
+
     CALayer *circle = [CALayer layer];
     circle.frame = CGRectInset(CGRectMake(0.0, 0.0, size.width, size.height), 2.0, 2.0);
     circle.backgroundColor = color.CGColor;
@@ -37,7 +37,7 @@
     circle.opacity = 1.0;
     circle.cornerRadius = CGRectGetHeight(circle.bounds) * 0.5;
     circle.transform = CATransform3DMakeScale(0.0, 0.0, 0.0);
-    
+
     CAKeyframeAnimation *scaleAnim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     scaleAnim.values = @[
         [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0)],
@@ -46,12 +46,12 @@
 
     CAKeyframeAnimation *opacityAnim = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
     opacityAnim.values = @[@(1.0), @(0.0)];
-    
+
     CAAnimationGroup *animGroup = [CAAnimationGroup animation];
     animGroup.removedOnCompletion = NO;
     animGroup.beginTime = beginTime;
     animGroup.repeatCount = HUGE_VALF;
-    animGroup.duration = 1.0;
+    animGroup.duration = duration;
     animGroup.animations = @[scaleAnim, opacityAnim];
     animGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 

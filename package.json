@@ -1,8 +1,69 @@
 {
-  "name": "react-native-spinkit",
-  "version": "1.0.2",
+  "_args": [
+    [
+      {
+        "raw": "react-native-spinkit@latest",
+        "scope": null,
+        "escapedName": "react-native-spinkit",
+        "name": "react-native-spinkit",
+        "rawSpec": "latest",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/nadia/Codeworks/Projects/tinder-roulette-ios"
+    ]
+  ],
+  "_from": "react-native-spinkit@latest",
+  "_id": "react-native-spinkit@1.0.2",
+  "_inCache": true,
+  "_location": "/react-native-spinkit",
+  "_nodeVersion": "5.6.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/react-native-spinkit-1.0.2.tgz_1485468290682_0.8312272760085762"
+  },
+  "_npmUser": {
+    "name": "maxs15",
+    "email": "maxime.mezrahi@gmail.com"
+  },
+  "_npmVersion": "3.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-spinkit@latest",
+    "scope": null,
+    "escapedName": "react-native-spinkit",
+    "name": "react-native-spinkit",
+    "rawSpec": "latest",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-spinkit/-/react-native-spinkit-1.0.2.tgz",
+  "_shasum": "0d31b019556e038aa8e953038562550cb0ead8d2",
+  "_shrinkwrap": null,
+  "_spec": "react-native-spinkit@latest",
+  "_where": "/Users/nadia/Codeworks/Projects/tinder-roulette-ios",
+  "author": {
+    "name": "Maxime Mezrahi",
+    "email": "maxime.mezrahi@gmail.com",
+    "url": "https://github.com/maxs15"
+  },
+  "bugs": {
+    "url": "https://github.com/maxs15/react-native-spinkit/issues"
+  },
+  "dependencies": {},
   "description": "A collection of animated loading indicators for React Native",
-  "main": "index.js",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "0d31b019556e038aa8e953038562550cb0ead8d2",
+    "tarball": "https://registry.npmjs.org/react-native-spinkit/-/react-native-spinkit-1.0.2.tgz"
+  },
+  "gitHead": "6ca60b8d067885763224040a9fb21d7d61f7f880",
+  "homepage": "https://github.com/maxs15/react-native-spinkit#readme",
   "keywords": [
     "react-component",
     "react-native",
@@ -13,20 +74,25 @@
     "loader",
     "indicator"
   ],
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "maxs15",
+      "email": "maxime.mezrahi@gmail.com"
+    }
+  ],
+  "name": "react-native-spinkit",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git://github.com/maxs15/react-native-spinkit.git"
   },
-  "author": {
-    "name": "Maxime Mezrahi",
-    "email": "maxime.mezrahi@gmail.com",
-    "url": "https://github.com/maxs15"
-  },
   "rnpm": {
-		"commands": {
-			"prelink": "node ./node_modules/react-native-spinkit/scripts/rnpm-prelink.js"
-		}
-	},
-  "dependencies": {
-  }
+    "commands": {
+      "prelink": "node ./node_modules/react-native-spinkit/scripts/rnpm-prelink.js"
+    }
+  },
+  "scripts": {},
+  "version": "1.0.2"
 }

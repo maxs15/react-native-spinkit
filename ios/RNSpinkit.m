@@ -9,6 +9,7 @@
    NSString *_type;
    NSString *_color;
    NSNumber *_size;
+   NSNumber *_duration;
 }
 
 #pragma mark - Setter
@@ -16,7 +17,7 @@
 - (void)setSize:(NSNumber*)size {
    _size = size;
    if (_spinner) {
-      _spinner.spinnerSize = [size floatValue];
+        _spinner.spinnerSize = [size floatValue];
    }
 }
 
@@ -48,6 +49,18 @@
 
 - (NSString*)color {
    return _color;
+}
+
+- (void)setDuration:(NSNumber*)duration
+{
+  _duration = duration;
+  if (_spinner) {
+       _spinner.duration = [duration floatValue];
+  }
+}
+
+- (NSNumber*)duration {
+   return _duration;
 }
 
 #pragma mark - Utility
@@ -109,7 +122,7 @@
    if (_spinner == nil) {
       UIColor *color = [self getColorFromString:_color];
       RTSpinKitViewStyle style = [self getStyleFromString:_type];
-      _spinner = [[RTSpinKitView alloc] initWithStyle:style color:color spinnerSize:[_size floatValue]];
+      _spinner = [[RTSpinKitView alloc] initWithStyle:style color:color spinnerSize:[_size floatValue] duration:[_duration floatValue]];
       [self insertSubview:_spinner atIndex:0];
    }
 }
