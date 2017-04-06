@@ -27,4 +27,5 @@
 
 @protocol RTSpinKitAnimating <NSObject>
 -(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration;
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
 @end
