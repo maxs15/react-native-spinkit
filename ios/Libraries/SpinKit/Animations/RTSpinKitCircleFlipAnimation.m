@@ -27,7 +27,7 @@
 
 @implementation RTSpinKitCircleFlipAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     CALayer *circle = [CALayer layer];
     circle.frame = CGRectInset(CGRectMake(0.0, 0.0, size.width, size.height), 2.0, 2.0);
@@ -38,13 +38,13 @@
     circle.shouldRasterize = YES;
     circle.rasterizationScale = [[UIScreen mainScreen] scale];
     [layer addSublayer:circle];
-    
+
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     anim.removedOnCompletion = NO;
     anim.repeatCount = HUGE_VALF;
-    anim.duration = 1.2;
+    anim.duration = duration || 1.2;
     anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
-    
+
     anim.timingFunctions = @[
         [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
         [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
@@ -56,7 +56,7 @@
         [NSValue valueWithCATransform3D:RTSpinKit3DRotationWithPerspective(1.0/120.0, M_PI, 0.0, 1.0, 0.0)],
         [NSValue valueWithCATransform3D:RTSpinKit3DRotationWithPerspective(1.0/120.0, M_PI, 0.0, 0.0, 1.0)]
     ];
-    
+
     [circle addAnimation:anim forKey:@"spinkit-anim"];
 }
 

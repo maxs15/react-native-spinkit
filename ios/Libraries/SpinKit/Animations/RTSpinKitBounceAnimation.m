@@ -42,7 +42,7 @@
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         anim.removedOnCompletion = NO;
         anim.repeatCount = HUGE_VALF;
-        anim.duration = duration;
+        anim.duration = duration || 2.0;
         anim.beginTime = beginTime - (1.0 * i);
         anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
 

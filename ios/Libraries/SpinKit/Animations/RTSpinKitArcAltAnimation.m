@@ -26,14 +26,14 @@
 
 @implementation RTSpinKitArcAltAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer *)layer withSize:(CGSize)size color:(UIColor *)color
+-(void)setupSpinKitAnimationInLayer:(CALayer *)layer withSize:(CGSize)size color:(UIColor *)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
-    
+
     CGRect  frame  = CGRectInset(CGRectMake(0.0, 0.0, size.width, size.height), 2.0, 2.0);
     CGFloat radius = CGRectGetWidth(frame) / 2.0;
     CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
-    
+
     CALayer *arc = [CALayer layer];
     arc.frame           = CGRectMake(0.0, 0.0, size.width, size.height);
     arc.backgroundColor = color.CGColor;
@@ -53,15 +53,15 @@
     mask.anchorPoint   = CGPointMake(0.5, 0.5);
 
     arc.mask = mask;
-    
+
     CGPathRelease(path);
-    
-    CGFloat duration = 1.2;
+
+    CGFloat defaultDuration = 1.2;
 
     CAKeyframeAnimation *strokeEndAnim = [CAKeyframeAnimation animationWithKeyPath:@"strokeEnd"];
     strokeEndAnim.removedOnCompletion = NO;
     strokeEndAnim.repeatCount = HUGE_VALF;
-    strokeEndAnim.duration    = duration;
+    strokeEndAnim.duration    = duration || defaultDuration;
     strokeEndAnim.beginTime   = beginTime;
     strokeEndAnim.keyTimes    = @[@(0.0), @(0.4), @(1.0)];
     strokeEndAnim.values      = @[@(0.0), @(1.0), @(1.0)];
@@ -74,7 +74,7 @@
     CAKeyframeAnimation *strokeStartAnim = [CAKeyframeAnimation animationWithKeyPath:@"strokeStart"];
     strokeStartAnim.removedOnCompletion = NO;
     strokeStartAnim.repeatCount = HUGE_VALF;
-    strokeStartAnim.duration    = duration;
+    strokeStartAnim.duration    = duration || defaultDuration;
     strokeStartAnim.beginTime   = beginTime;
     strokeStartAnim.keyTimes    = @[@(0.0), @(0.6), @(1.0)];
     strokeStartAnim.values      = @[@(0.0), @(0.0), @(1.0)];

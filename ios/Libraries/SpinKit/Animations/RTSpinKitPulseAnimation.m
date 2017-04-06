@@ -51,7 +51,7 @@
     animGroup.removedOnCompletion = NO;
     animGroup.beginTime = beginTime;
     animGroup.repeatCount = HUGE_VALF;
-    animGroup.duration = duration;
+    animGroup.duration = duration || 1.0 ;
     animGroup.animations = @[scaleAnim, opacityAnim];
     animGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 

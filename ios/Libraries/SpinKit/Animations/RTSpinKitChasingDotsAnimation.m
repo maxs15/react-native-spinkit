@@ -41,7 +41,7 @@
     CAKeyframeAnimation *spinnerAnim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     spinnerAnim.removedOnCompletion = NO;
     spinnerAnim.repeatCount = HUGE_VALF;
-    spinnerAnim.duration = duration;
+    spinnerAnim.duration = duration || 2.0;
     spinnerAnim.beginTime = beginTime;
     spinnerAnim.keyTimes = @[@(0.0), @(0.25), @(0.5), @(0.75), @(1.0)];
 

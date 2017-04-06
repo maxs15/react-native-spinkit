@@ -27,7 +27,7 @@
 
 @implementation RTSpinKitPlaneAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     CALayer *plane = [CALayer layer];
     plane.frame = CGRectInset(CGRectMake(0.0, 0.0, size.width, size.height), 2.0, 2.0);
@@ -41,7 +41,7 @@
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     anim.removedOnCompletion = NO;
     anim.repeatCount = HUGE_VALF;
-    anim.duration = 1.2;
+    anim.duration =  duration || 1.2;
     anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
 
     anim.timingFunctions = @[

@@ -59,7 +59,7 @@
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
     anim.removedOnCompletion = NO;
     anim.repeatCount = HUGE_VALF;
-    anim.duration = duration;
+    anim.duration = duration || 0.8;
     anim.beginTime = beginTime;
     anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
 
