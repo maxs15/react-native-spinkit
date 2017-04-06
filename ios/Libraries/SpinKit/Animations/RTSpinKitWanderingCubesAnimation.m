@@ -46,9 +46,9 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         anim.removedOnCompletion = NO;
         anim.beginTime = beginTime - (i * 0.9);
-        anim.duration = duration || 1.8
+        anim.duration = duration || 1.8;
         anim.repeatCount = HUGE_VALF;
-        
+
         anim.keyTimes = @[@(0.0), @(0.25), @(0.50), @(0.75), @(1.0)];
 
         anim.timingFunctions = @[
