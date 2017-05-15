@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641194901EC9FD6900D4FC03 /* RNSpinkit.m in Sources */ = {isa = PBXBuildFile; fileRef = D42CB36F1B253C0B00FD0AE2 /* RNSpinkit.m */; };
+		641194911EC9FD6900D4FC03 /* RNSpinkitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D42CB36C1B25394600FD0AE2 /* RNSpinkitManager.m */; };
+		641194921EC9FD6900D4FC03 /* RTSpinKit9CubeGridAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D5E1B879C8500F8D7CB /* RTSpinKit9CubeGridAnimation.m */; };
+		641194931EC9FD6900D4FC03 /* RTSpinKitArcAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D601B879C8500F8D7CB /* RTSpinKitArcAltAnimation.m */; };
+		641194941EC9FD6900D4FC03 /* RTSpinKitArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D621B879C8500F8D7CB /* RTSpinKitArcAnimation.m */; };
+		641194951EC9FD6900D4FC03 /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D641B879C8500F8D7CB /* RTSpinKitBounceAnimation.m */; };
+		641194961EC9FD6900D4FC03 /* RTSpinKitChasingDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D661B879C8500F8D7CB /* RTSpinKitChasingDotsAnimation.m */; };
+		641194971EC9FD6900D4FC03 /* RTSpinKitCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D681B879C8500F8D7CB /* RTSpinKitCircleAnimation.m */; };
+		641194981EC9FD6900D4FC03 /* RTSpinKitCircleFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D6A1B879C8500F8D7CB /* RTSpinKitCircleFlipAnimation.m */; };
+		641194991EC9FD6900D4FC03 /* RTSpinKitFadingCircleAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D6C1B879C8500F8D7CB /* RTSpinKitFadingCircleAltAnimation.m */; };
+		6411949A1EC9FD6900D4FC03 /* RTSpinKitFadingCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D6E1B879C8500F8D7CB /* RTSpinKitFadingCircleAnimation.m */; };
+		6411949B1EC9FD6900D4FC03 /* RTSpinKitPlaneAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D701B879C8500F8D7CB /* RTSpinKitPlaneAnimation.m */; };
+		6411949C1EC9FD6900D4FC03 /* RTSpinKitPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D721B879C8500F8D7CB /* RTSpinKitPulseAnimation.m */; };
+		6411949D1EC9FD6900D4FC03 /* RTSpinKitThreeBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D741B879C8500F8D7CB /* RTSpinKitThreeBounceAnimation.m */; };
+		6411949E1EC9FD6900D4FC03 /* RTSpinKitWanderingCubesAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D761B879C8500F8D7CB /* RTSpinKitWanderingCubesAnimation.m */; };
+		6411949F1EC9FD6900D4FC03 /* RTSpinKitWaveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D781B879C8500F8D7CB /* RTSpinKitWaveAnimation.m */; };
+		641194A01EC9FD6900D4FC03 /* RTSpinKitWordPressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D7A1B879C8500F8D7CB /* RTSpinKitWordPressAnimation.m */; };
+		641194A11EC9FD6900D4FC03 /* RTSpinKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D7D1B879C8500F8D7CB /* RTSpinKitUtils.m */; };
+		641194A21EC9FD6900D4FC03 /* RTSpinKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D7F1B879C8500F8D7CB /* RTSpinKitView.m */; };
 		D42CB36D1B25394600FD0AE2 /* RNSpinkitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D42CB36C1B25394600FD0AE2 /* RNSpinkitManager.m */; };
 		D42CB3701B253C0B00FD0AE2 /* RNSpinkit.m in Sources */ = {isa = PBXBuildFile; fileRef = D42CB36F1B253C0B00FD0AE2 /* RNSpinkit.m */; };
 		D4640D801B879C8500F8D7CB /* RTSpinKit9CubeGridAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4640D5E1B879C8500F8D7CB /* RTSpinKit9CubeGridAnimation.m */; };
@@ -29,6 +48,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		641194851EC9FD4A00D4FC03 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D42CB34F1B2538DE00FD0AE2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		641194871EC9FD4A00D4FC03 /* libRNSpinkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSpinkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42CB3511B2538DE00FD0AE2 /* libRNSpinkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSpinkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42CB36B1B25392F00FD0AE2 /* RNSpinkitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSpinkitManager.h; sourceTree = "<group>"; };
 		D42CB36C1B25394600FD0AE2 /* RNSpinkitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSpinkitManager.m; sourceTree = "<group>"; };
@@ -84,6 +113,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		641194841EC9FD4A00D4FC03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D42CB34E1B2538DE00FD0AE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				D42CB3511B2538DE00FD0AE2 /* libRNSpinkit.a */,
+				641194871EC9FD4A00D4FC03 /* libRNSpinkit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +205,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		641194861EC9FD4A00D4FC03 /* RNSpinkit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6411948F1EC9FD4A00D4FC03 /* Build configuration list for PBXNativeTarget "RNSpinkit-tvOS" */;
+			buildPhases = (
+				641194831EC9FD4A00D4FC03 /* Sources */,
+				641194841EC9FD4A00D4FC03 /* Frameworks */,
+				641194851EC9FD4A00D4FC03 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNSpinkit-tvOS";
+			productName = "RNSpinkit-tvOS";
+			productReference = 641194871EC9FD4A00D4FC03 /* libRNSpinkit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		D42CB3501B2538DE00FD0AE2 /* RNSpinkit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D42CB3651B2538DE00FD0AE2 /* Build configuration list for PBXNativeTarget "RNSpinkit" */;
@@ -193,6 +247,10 @@
 			attributes = {
 				LastUpgradeCheck = 0610;
 				TargetAttributes = {
+					641194861EC9FD4A00D4FC03 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					D42CB3501B2538DE00FD0AE2 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -211,11 +269,38 @@
 			projectRoot = "";
 			targets = (
 				D42CB3501B2538DE00FD0AE2 /* RNSpinkit */,
+				641194861EC9FD4A00D4FC03 /* RNSpinkit-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		641194831EC9FD4A00D4FC03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641194901EC9FD6900D4FC03 /* RNSpinkit.m in Sources */,
+				641194911EC9FD6900D4FC03 /* RNSpinkitManager.m in Sources */,
+				641194921EC9FD6900D4FC03 /* RTSpinKit9CubeGridAnimation.m in Sources */,
+				641194931EC9FD6900D4FC03 /* RTSpinKitArcAltAnimation.m in Sources */,
+				641194941EC9FD6900D4FC03 /* RTSpinKitArcAnimation.m in Sources */,
+				641194951EC9FD6900D4FC03 /* RTSpinKitBounceAnimation.m in Sources */,
+				641194961EC9FD6900D4FC03 /* RTSpinKitChasingDotsAnimation.m in Sources */,
+				641194971EC9FD6900D4FC03 /* RTSpinKitCircleAnimation.m in Sources */,
+				641194981EC9FD6900D4FC03 /* RTSpinKitCircleFlipAnimation.m in Sources */,
+				641194991EC9FD6900D4FC03 /* RTSpinKitFadingCircleAltAnimation.m in Sources */,
+				6411949A1EC9FD6900D4FC03 /* RTSpinKitFadingCircleAnimation.m in Sources */,
+				6411949B1EC9FD6900D4FC03 /* RTSpinKitPlaneAnimation.m in Sources */,
+				6411949C1EC9FD6900D4FC03 /* RTSpinKitPulseAnimation.m in Sources */,
+				6411949D1EC9FD6900D4FC03 /* RTSpinKitThreeBounceAnimation.m in Sources */,
+				6411949E1EC9FD6900D4FC03 /* RTSpinKitWanderingCubesAnimation.m in Sources */,
+				6411949F1EC9FD6900D4FC03 /* RTSpinKitWaveAnimation.m in Sources */,
+				641194A01EC9FD6900D4FC03 /* RTSpinKitWordPressAnimation.m in Sources */,
+				641194A11EC9FD6900D4FC03 /* RTSpinKitUtils.m in Sources */,
+				641194A21EC9FD6900D4FC03 /* RTSpinKitView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D42CB34D1B2538DE00FD0AE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +330,44 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6411948D1EC9FD4A00D4FC03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNSpinkit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		6411948E1EC9FD4A00D4FC03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNSpinkit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		D42CB3631B2538DE00FD0AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -356,6 +479,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6411948F1EC9FD4A00D4FC03 /* Build configuration list for PBXNativeTarget "RNSpinkit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6411948D1EC9FD4A00D4FC03 /* Debug */,
+				6411948E1EC9FD4A00D4FC03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D42CB34C1B2538DE00FD0AE2 /* Build configuration list for PBXProject "RNSpinkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
