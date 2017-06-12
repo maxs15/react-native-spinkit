@@ -37,6 +37,7 @@ Check [index.ios.js](https://github.com/maxs15/react-native-spinkit/blob/master/
 | color | #000000 | `string` | Color of the spinner  |
 | size | 37 | `number` | Size of the spinner |
 | type | Plane | `string` | Style type of the spinner |
+| duration | various | `number` | Duration of spinner animation |
 
 ### List of available types
 
