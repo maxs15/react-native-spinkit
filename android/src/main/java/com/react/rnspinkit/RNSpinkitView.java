@@ -35,9 +35,9 @@ public class RNSpinkitView extends SpinKitView{
         super(context);
     }
 
-    public void setSpriteColor(String color) {
+    public void setSpriteColor(int color) {
         try {
-            mColor = Color.parseColor(color);
+            mColor = color;
             this.mSprite.setColor(mColor);
             this.setIndeterminateDrawable(mSprite);
         } catch(Exception err) {
