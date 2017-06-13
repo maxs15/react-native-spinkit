@@ -26,7 +26,7 @@
 
 @implementation RTSpinKitWaveAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime() + 1.2;
     CGFloat barWidth = size.width / 5.0;
@@ -40,7 +40,7 @@
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         anim.removedOnCompletion = NO;
         anim.beginTime = beginTime - (1.2 - (0.1 * i));
-        anim.duration = 1.2;
+        anim.duration = duration || 1.2;
         anim.repeatCount = HUGE_VALF;
 
         anim.keyTimes = @[@(0.0), @(0.2), @(0.4), @(1.0)];

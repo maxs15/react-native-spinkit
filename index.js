@@ -15,6 +15,7 @@ class Spinkit extends React.Component {
 		type: React.PropTypes.string,
 		color: React.PropTypes.string,
 		size: React.PropTypes.number,
+    duration: React.PropTypes.number,
 		isVisible: React.PropTypes.bool,
 		testID:React.PropTypes.string,
 		accessibilityComponentType:PropTypes.string,
@@ -40,6 +41,7 @@ class Spinkit extends React.Component {
 				type={String(this.props.type)}
 				size={parseInt(this.props.size)}
 				color={this.props.color}
+        duration={this.props.duration}
 				style={[size, this.props.style]}/>
 		);
 	}

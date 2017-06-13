@@ -27,16 +27,16 @@
 
 @implementation RTSpinKitFadingCircleAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
-    
+
     CGFloat radius = size.width / 2;
     CGFloat squareSize = size.width / 6;
 
     for (NSInteger i=0; i < 12; i+=1) {
         CALayer *square = [CALayer layer];
-        
+
         CGFloat angle = i * (M_PI_2/3.0);
         CGFloat x = radius + sinf(angle) * radius;
         CGFloat y = radius - cosf(angle) * radius;
@@ -52,15 +52,15 @@
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
         anim.removedOnCompletion = NO;
         anim.repeatCount = HUGE_VALF;
-        anim.duration = 1.0;
+        anim.duration = duration || 1.0;
         anim.beginTime = beginTime + (0.084 * i);
         anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
-        
+
         anim.timingFunctions = @[
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]
         ];
-        
+
         anim.values = @[@(1.0), @(0.0), @(0.0)];
 
         [layer addSublayer:square];

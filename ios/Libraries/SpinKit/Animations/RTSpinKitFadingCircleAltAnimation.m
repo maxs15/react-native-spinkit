@@ -29,7 +29,7 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
 
 @implementation RTSpinKitFadingCircleAltAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color {
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration  {
         NSTimeInterval beginTime = CACurrentMediaTime() ;
 
         CGFloat radius =  size.width / 2;
@@ -51,7 +51,7 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
             ];
 
             CAKeyframeAnimation* opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
-            
+
             opacityAnimation.values = @[
                 @(1.0),
                 @(0.0)
@@ -60,7 +60,7 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
             CAAnimationGroup* animationGroup = [[CAAnimationGroup alloc] init];
             animationGroup.removedOnCompletion = NO;
             animationGroup.repeatCount = HUGE_VALF;
-            animationGroup.duration = 1.2;
+            animationGroup.duration = duration || 1.2;
             animationGroup.beginTime = beginTime - (1.2 - (0.1 * i));
             animationGroup.animations = @[transformAnimation, opacityAnimation];
             [circle addAnimation:animationGroup forKey:@"spinkit-anim"];

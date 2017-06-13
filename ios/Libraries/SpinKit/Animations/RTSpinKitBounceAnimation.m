@@ -26,7 +26,7 @@
 
 @implementation RTSpinKitBounceAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
 
@@ -38,14 +38,14 @@
         circle.opacity = 0.6;
         circle.cornerRadius = CGRectGetHeight(circle.bounds) * 0.5;
         circle.transform = CATransform3DMakeScale(0.0, 0.0, 0.0);
-        
+
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         anim.removedOnCompletion = NO;
         anim.repeatCount = HUGE_VALF;
-        anim.duration = 2.0;
+        anim.duration = duration || 2.0;
         anim.beginTime = beginTime - (1.0 * i);
         anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
-        
+
         anim.timingFunctions = @[
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],

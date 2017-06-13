@@ -70,13 +70,18 @@ typedef NS_ENUM(NSInteger, RTSpinKitViewStyle) {
  */
 @property (nonatomic, assign) CGFloat spinnerSize;
 
+/**
+ The duration of the animation
+ */
+@property (nonatomic, assign) CGFloat duration;
+
 @property (nonatomic, assign, getter = isStopped) BOOL stopped;
 
 /**
  Initializes and returns an activity indicator object.
 
  @param style The style of the activity indicator.
- 
+
  @return The newly-initialized SpinKit view.
  */
 -(instancetype)initWithStyle:(RTSpinKitViewStyle)style;
@@ -104,7 +109,8 @@ typedef NS_ENUM(NSInteger, RTSpinKitViewStyle) {
  */
 -(instancetype)initWithStyle:(RTSpinKitViewStyle)style
                        color:(UIColor*)color
-                 spinnerSize:(CGFloat)spinnerSize;
+                 spinnerSize:(CGFloat)spinnerSize
+                    duration:(CGFloat)duration;
 
 /**
  Starts the animation of the activity indicator.
@@ -125,7 +131,7 @@ typedef NS_ENUM(NSInteger, RTSpinKitViewStyle) {
 
 /**
  Sets the color of the spinner.
- 
+
  @param color The desired color for the spinner.
  @param animated Whether or not to animate.
  */

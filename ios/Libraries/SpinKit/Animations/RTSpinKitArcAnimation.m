@@ -26,7 +26,7 @@
 
 @implementation RTSpinKitArcAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer *)layer withSize:(CGSize)size color:(UIColor *)color
+-(void)setupSpinKitAnimationInLayer:(CALayer *)layer withSize:(CGSize)size color:(UIColor *)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
 
@@ -59,7 +59,7 @@
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
     anim.removedOnCompletion = NO;
     anim.repeatCount = HUGE_VALF;
-    anim.duration = 0.8;
+    anim.duration = duration || 0.8;
     anim.beginTime = beginTime;
     anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
 

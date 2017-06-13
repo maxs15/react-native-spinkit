@@ -29,7 +29,7 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
 
 @implementation RTSpinKitWanderingCubesAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
     CGFloat cubeSize = floor(size.width / 3.0);
@@ -42,15 +42,15 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
         cube.anchorPoint = CGPointMake(0.5, 0.5);
         cube.shouldRasterize = YES;
         cube.rasterizationScale = [[UIScreen mainScreen] scale];
-        
+
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         anim.removedOnCompletion = NO;
         anim.beginTime = beginTime - (i * 0.9);
-        anim.duration = 1.8;
+        anim.duration = duration || 1.8;
         anim.repeatCount = HUGE_VALF;
-        
+
         anim.keyTimes = @[@(0.0), @(0.25), @(0.50), @(0.75), @(1.0)];
-        
+
         anim.timingFunctions = @[
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
@@ -60,19 +60,19 @@ static const CGFloat kRTSpinKitDegToRad = 0.0174532925;
         ];
 
         CATransform3D t0 = CATransform3DIdentity;
-        
+
         CATransform3D t1 = CATransform3DMakeTranslation(widthMinusCubeSize, 0.0, 0.0);
         t1 = CATransform3DRotate(t1, -90.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0);
         t1 = CATransform3DScale(t1, 0.5, 0.5, 1.0);
-        
+
         CATransform3D t2 = CATransform3DMakeTranslation(widthMinusCubeSize, widthMinusCubeSize, 0.0);
         t2 = CATransform3DRotate(t2, -180.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0);
         t2 = CATransform3DScale(t2, 1.0, 1.0, 1.0);
-        
+
         CATransform3D t3 = CATransform3DMakeTranslation(0.0, widthMinusCubeSize, 0.0);
         t3 = CATransform3DRotate(t3, -270.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0);
         t3 = CATransform3DScale(t3, 0.5, 0.5, 1.0);
-        
+
         CATransform3D t4 = CATransform3DMakeTranslation(0.0, 0.0, 0.0);
         t4 = CATransform3DRotate(t4, -360.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0);
         t4 = CATransform3DScale(t4, 1.0, 1.0, 1.0);

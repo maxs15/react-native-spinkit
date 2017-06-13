@@ -26,10 +26,10 @@
 
 @implementation RTSpinKitWordPressAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
-    
+
     CALayer *spinner = [CALayer layer];
     spinner.frame = CGRectMake(0.0, 0.0, size.width, size.height);
     spinner.anchorPoint = CGPointMake(0.5, 0.5);
@@ -42,10 +42,10 @@
     CAKeyframeAnimation *spinnerAnim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     spinnerAnim.removedOnCompletion = NO;
     spinnerAnim.repeatCount = HUGE_VALF;
-    spinnerAnim.duration = 1.0;
+    spinnerAnim.duration = duration || 1.0;
     spinnerAnim.beginTime = beginTime;
     spinnerAnim.keyTimes = @[@(0.0), @(0.25), @(0.5), @(0.75), @(1.0)];
-    
+
     spinnerAnim.timingFunctions = @[
         [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear],
         [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear],
@@ -68,7 +68,7 @@
     circleMask.frame = spinner.bounds;
     circleMask.fillColor = [UIColor blackColor].CGColor;
     circleMask.anchorPoint = CGPointMake(0.5, 0.5);
-    
+
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddEllipseInRect(path, nil, spinner.frame);
 

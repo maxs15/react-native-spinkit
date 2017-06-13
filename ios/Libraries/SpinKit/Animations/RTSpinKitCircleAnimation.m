@@ -27,7 +27,7 @@
 
 @implementation RTSpinKitCircleAnimation
 
--(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color
+-(void)setupSpinKitAnimationInLayer:(CALayer*)layer withSize:(CGSize)size color:(UIColor*)color duration:(CGFloat)duration
 {
     NSTimeInterval beginTime = CACurrentMediaTime();
 
@@ -36,7 +36,7 @@
 
     for (NSInteger i=0; i < 8; i+=1) {
         CALayer *circle = [CALayer layer];
-  
+
         CGFloat angle = i * M_PI_4;
         CGFloat x = radius + sinf(angle) * radius;
         CGFloat y = radius - cosf(angle) * radius;
@@ -45,14 +45,14 @@
         circle.anchorPoint = CGPointMake(0.5, 0.5);
         circle.cornerRadius = CGRectGetHeight(circle.bounds) * 0.5;
         circle.transform = CATransform3DMakeScale(0.0, 0.0, 0.0);
-  
+
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         anim.removedOnCompletion = NO;
         anim.repeatCount = HUGE_VALF;
-        anim.duration = 1.0;
+        anim.duration = duration || 1.0;
         anim.beginTime = beginTime + (0.125 * i);
         anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
-  
+
         anim.timingFunctions = @[
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
             [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
