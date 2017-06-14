@@ -1,45 +1,52 @@
 var React = require('react');
 var ReactNative = require('react-native');
+var createReactClass = require('create-react-class');
 
-var {
-  AppRegistry,
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  Text
-} = ReactNative;
+var { AppRegistry, StyleSheet, View, TouchableOpacity, Text } = ReactNative;
 
 var Spinner = require('react-native-spinkit');
 
-var Example = React.createClass({
-
+var Example = createReactClass({
   getInitialState() {
     return {
       index: 0,
-      types: ['CircleFlip', 'Bounce', 'Wave', 'WanderingCubes', 'Pulse', 'ChasingDots', 'ThreeBounce', 'Circle', '9CubeGrid', 'WordPress', 'FadingCircle', 'FadingCircleAlt', 'Arc', 'ArcAlt'],
+      types: [
+        'CircleFlip',
+        'Bounce',
+        'Wave',
+        'WanderingCubes',
+        'Pulse',
+        'ChasingDots',
+        'ThreeBounce',
+        'Circle',
+        '9CubeGrid',
+        'WordPress',
+        'FadingCircle',
+        'FadingCircleAlt',
+        'Arc',
+        'ArcAlt'
+      ],
       size: 100,
-      color: "#FFFFFF",
+      color: '#FFFFFF',
       isVisible: true
-    }
+    };
   },
 
   next() {
-    if (this.state.index++ >= this.state.types.length)
-      this.setState({index: 0})
-    else
-      this.setState({index: this.state.index++})
+    if (this.state.index++ >= this.state.types.length) this.setState({ index: 0 });
+    else this.setState({ index: this.state.index++ });
   },
 
   increaseSize() {
-    this.setState({size: this.state.size + 10});
+    this.setState({ size: this.state.size + 10 });
   },
 
   changeColor() {
-    this.setState({color: '#'+Math.floor(Math.random()*16777215).toString(16)});
+    this.setState({ color: '#' + Math.floor(Math.random() * 16777215).toString(16) });
   },
 
   changeVisibility() {
-    this.setState({isVisible: !this.state.isVisible});
+    this.setState({ isVisible: !this.state.isVisible });
   },
 
   render() {
@@ -47,7 +54,13 @@ var Example = React.createClass({
 
     return (
       <View style={styles.container}>
-        <Spinner style={styles.spinner} isVisible={this.state.isVisible} size={this.state.size} type={type} color={this.state.color}/>
+        <Spinner
+          style={styles.spinner}
+          isVisible={this.state.isVisible}
+          size={this.state.size}
+          type={type}
+          color={this.state.color}
+        />
 
         <Text style={styles.text}>Type: {type}</Text>
 
@@ -69,7 +82,6 @@ var Example = React.createClass({
       </View>
     );
   }
-
 });
 
 var styles = StyleSheet.create({
@@ -77,7 +89,7 @@ var styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#d35400',
+    backgroundColor: '#d35400'
   },
 
   spinner: {
@@ -89,7 +101,7 @@ var styles = StyleSheet.create({
   },
 
   text: {
-    color: "white"
+    color: 'white'
   }
 });
 
