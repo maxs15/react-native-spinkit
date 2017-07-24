@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
 import ReactNative from 'react-native'
+import PropTypes from 'prop-types';
 
 var {
 	NativeModules,
@@ -13,7 +14,7 @@ var RNSpinkit = null;
 class Spinkit extends React.Component {
 
 	static propTypes = {
-		type: React.PropTypes.string,
+		type: PropTypes.string,
 		/**
 		 * @prop color
 		 * @NOTE This is typically passed as a string, but technically can also be
@@ -22,16 +23,16 @@ class Spinkit extends React.Component {
 		 *	React Native will throw if passing a string into this component but a
 		 *	different type (number) down to the native module.
 		 */
-		color: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
-		size: React.PropTypes.number,
-		isVisible: React.PropTypes.bool,
-		testID:React.PropTypes.string,
-		accessibilityComponentType:PropTypes.string,
-		accessibilityLabel:PropTypes.string,
-		accessibilityLiveRegion:PropTypes.string,
-		renderToHardwareTextureAndroid:PropTypes.bool,
-		importantForAccessibility:PropTypes.string,
-		onLayout:PropTypes.func,
+		color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+		size: PropTypes.number,
+		isVisible: PropTypes.bool,
+		testID: PropTypes.string,
+		accessibilityComponentType: PropTypes.string,
+		accessibilityLabel: PropTypes.string,
+		accessibilityLiveRegion: PropTypes.string,
+		renderToHardwareTextureAndroid: PropTypes.bool,
+		importantForAccessibility: PropTypes.string,
+		onLayout: PropTypes.func,
 	};
 
 	static defaultProps = {
