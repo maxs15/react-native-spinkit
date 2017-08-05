@@ -35,7 +35,7 @@
     
     for (NSInteger i=0; i < 3; i+=1) {
         CALayer *circle = [CALayer layer];
-        circle.frame = CGRectMake(i * 3 * offset, size.height / 2, circleSize, circleSize);
+        circle.frame = CGRectMake(i * 3 * offset, 0, circleSize, circleSize);
         circle.backgroundColor = color.CGColor;
         circle.anchorPoint = CGPointMake(0.5, 0.5);
         circle.cornerRadius = CGRectGetHeight(circle.bounds) * 0.5;
