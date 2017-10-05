@@ -58,7 +58,10 @@ class Spinkit extends React.Component {
 				type={String(this.props.type)}
 				size={parseInt(this.props.size)}
 				color={colorNumber}
-				style={[size, this.props.style]}/>
+				style={[size, this.props.style]}
+			>
+          {this.props.children}
+			</RNSpinkit>
 		);
 	}
 
