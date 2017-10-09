@@ -6,7 +6,8 @@ var {
 	NativeModules,
 	processColor,
 	requireNativeComponent,
-	View
+	View,
+	Platform
 } = ReactNative;
 
 var RNSpinkit = null;
@@ -41,6 +42,12 @@ class Spinkit extends React.Component {
 		isVisible: true
 	};
 
+	renderChildren() {
+		if(Platform.OS !== 'android') {
+			return (this.props.children);
+		}
+	}
+
 	render() {
 		if (!this.props.isVisible) return <View/>;
 
@@ -60,7 +67,7 @@ class Spinkit extends React.Component {
 				color={colorNumber}
 				style={[size, this.props.style]}
 			>
-          {this.props.children}
+			 {this.renderChildren()}
 			</RNSpinkit>
 		);
 	}
