@@ -38,8 +38,8 @@
         CALayer *circle = [CALayer layer];
   
         CGFloat angle = i * M_PI_4;
-        CGFloat x = radius + sinf(angle) * radius;
-        CGFloat y = radius - cosf(angle) * radius;
+        CGFloat x = radius + sinf(angle) * radius - circleSize/2;
+        CGFloat y = radius - cosf(angle) * radius - circleSize/2;
         circle.frame = CGRectMake(x, y, circleSize, circleSize);
         circle.backgroundColor = color.CGColor;
         circle.anchorPoint = CGPointMake(0.5, 0.5);
