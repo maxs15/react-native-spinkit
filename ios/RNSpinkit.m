@@ -1,7 +1,22 @@
 #import "RNSpinkit.h"
+
+#if __has_include(<React/RCTConvert.h>)
 #import <React/RCTConvert.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTConvert.h"
+#endif
+
+#if __has_include(<React/RCTBridgeModule.h>)
 #import <React/RCTBridgeModule.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTBridgeModule.h"
+#endif
+
+#if __has_include(<React/UIView+React.h>)
 #import <React/UIView+React.h>
+#else // Compatibility for RN version < 0.40
+#import "UIView+React.h"
+#endif
 
 @implementation RNSpinkit
 {

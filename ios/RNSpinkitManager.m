@@ -1,6 +1,11 @@
 #import "RNSpinkitManager.h"
 #import "RNSpinkit.h"
+
+#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTBridge.h"
+#endif
 
 @implementation RNSpinkitManager
 
