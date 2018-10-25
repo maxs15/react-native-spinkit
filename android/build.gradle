@@ -9,23 +9,26 @@ repositories {
 
 buildscript {
     repositories {
+        google()
         mavenCentral()
         maven {
             url "https://jitpack.io"
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
+def _ext = rootProject.ext; 
+
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion _ext.has('compileSdkVersion') ? _ext.compileSdkVersion : 26;
+    buildToolsVersion _ext.has('buildToolsVersion') ? _ext.buildToolsVersion : '26.0.1';
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion _ext.has('targetSdkVersion') ? _ext.targetSdkVersion : 26;
         versionCode 1
         versionName "1.0"
     }
