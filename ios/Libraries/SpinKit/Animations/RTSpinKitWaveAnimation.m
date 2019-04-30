@@ -34,7 +34,7 @@
     for (NSInteger i=0; i < 5; i+=1) {
         CALayer *bar = [CALayer layer];
         bar.backgroundColor = color.CGColor;
-        bar.frame = CGRectMake(barWidth * i, 0.0, barWidth - 3.0, size.height);
+        bar.frame = CGRectMake(barWidth * i + 1.5, 0.0, barWidth - 3.0, size.height);
         bar.transform = CATransform3DMakeScale(1.0, 0.3, 0.0);
 
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
