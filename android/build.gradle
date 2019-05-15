@@ -43,6 +43,6 @@ android {
 
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
 }
