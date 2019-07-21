@@ -22,11 +22,6 @@
     "email": "maxime.mezrahi@gmail.com",
     "url": "https://github.com/maxs15"
   },
-  "rnpm": {
-		"commands": {
-			"prelink": "node ./node_modules/react-native-spinkit/scripts/rnpm-prelink.js"
-		}
-	},
   "dependencies": {
     "prop-types": "^15.5.8"
   }
