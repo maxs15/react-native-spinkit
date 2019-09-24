@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "react-native-spinkit"
-  s.version      = "1.0.2"
+  s.version      = package['version']
   s.license      = "MIT"
   s.homepage     = "https://github.com/maxs15/react-native-spinkit"
   s.authors      = { 'Maxime Mezrahi' => 'maximemezrahi@gmail.com' }
