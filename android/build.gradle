@@ -60,7 +60,7 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 }
 
 def configureReactNativePom(def pom) {
