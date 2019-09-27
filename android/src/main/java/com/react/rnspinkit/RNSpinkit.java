@@ -2,7 +2,7 @@ package com.react.rnspinkit;
 
 
 import android.graphics.Color;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;

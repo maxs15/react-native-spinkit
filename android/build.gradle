@@ -1,48 +1,50 @@
+buildscript {
+    ext.safeExtGet = {prop, fallback ->
+        rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        //noinspection GradleDependency
+        classpath("com.android.tools.build:gradle:${safeExtGet('gradlePluginVersion', '3.4.1')}")
+    }
+}
+
 apply plugin: 'com.android.library'
 
-def safeExtGet(prop, fallback) {
-    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+android {
+    compileSdkVersion safeExtGet('compileSdkVersion', 28)
+    //noinspection GradleDependency
+    buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
+
+    defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', 16)
+        //noinspection OldTargetApi
+        targetSdkVersion safeExtGet('targetSdkVersion', 28)
+    }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 repositories {
-    mavenCentral()
+    mavenLocal()
+    google()
+    jcenter()
+    maven {
+        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+        url "$rootDir/../node_modules/react-native/android"
+    }
     maven {
         url "https://jitpack.io"
     }
 }
 
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url "https://jitpack.io"
-        }
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0'
-    }
-}
-
-android {
-    compileSdkVersion  safeExtGet('compileSdkVersion', 23)
-    buildToolsVersion  safeExtGet('buildToolsVersion', "23.0.1")
-
-    defaultConfig {
-        minSdkVersion  safeExtGet('minSdkVersion', 16)
-        targetSdkVersion safeExtGet('targetSdkVersion', 23)
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-}
-
-
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
-    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    //noinspection GradleDynamicVersion
+    implementation "com.facebook.react:react-native:${safeExtGet('reactnativeVersion', '+')}"
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 }
