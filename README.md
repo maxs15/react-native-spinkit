@@ -6,6 +6,12 @@
 A collection of animated loading indicators   
 React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 
+## 👇 Give it a try or just some love ⭐
+<a href="https://bit.ly/react-native-iaphub" title="IAPHUB link">
+	<img width=882px src="https://www.iaphub.com/github-rn-ad.png" alt="IAPHUB logo">
+</a>
+<br/>
+
 ## Preview
 ![](http://i.imgur.com/AwJsakU.gif)
 
