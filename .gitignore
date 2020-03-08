@@ -34,6 +34,7 @@ local.properties
 #
 node_modules/
 npm-debug.log
+.npmrc
 
 # BUCK
 buck-out/
