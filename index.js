@@ -33,6 +33,7 @@ class Spinkit extends React.Component {
 		renderToHardwareTextureAndroid: PropTypes.bool,
 		importantForAccessibility: PropTypes.string,
 		onLayout: PropTypes.func,
+		style: PropTypes.object,
 	};
 
 	static defaultProps = {
