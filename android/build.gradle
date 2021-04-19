@@ -3,8 +3,8 @@ buildscript {
         rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
     }
     repositories {
+        mavenCentral()
         google()
-        jcenter()
     }
 
     dependencies {
@@ -31,9 +31,9 @@ android {
 }
 
 repositories {
+    mavenCentral()
     mavenLocal()
     google()
-    jcenter()
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
