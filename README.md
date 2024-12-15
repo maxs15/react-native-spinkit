@@ -7,7 +7,7 @@ A collection of animated loading indicators
 React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 
 ## Use your beautiful spinner to sell in-app purchases 👇
-<a href="https://bit.ly/react-native-iaphub" title="IAPHUB">
+<a href="https://landing.iaphub.com/cc/react-native-spinkit" title="IAPHUB">
 	<img width=882px src="https://www.iaphub.com/img/github/github-rn-ad.png" alt="IAPHUB">
 </a>
 <br/>
