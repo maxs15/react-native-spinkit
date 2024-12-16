@@ -6,7 +6,8 @@ var {
 	NativeModules,
 	processColor,
 	requireNativeComponent,
-	View
+	View,
+	ViewPropTypes
 } = ReactNative;
 
 var RNSpinkit = null;
@@ -33,7 +34,7 @@ class Spinkit extends React.Component {
 		renderToHardwareTextureAndroid: PropTypes.bool,
 		importantForAccessibility: PropTypes.string,
 		onLayout: PropTypes.func,
-		style: PropTypes.object,
+		style: ViewPropTypes.style,
 	};
 
 	static defaultProps = {
